@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Alen!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <h1 class="text-5xl md:text-7xl font-bold text-pink-700 drop-shadow-lg animate-bounce">
+            Feliz Cumpleaños Alen
+        </h1>
+        <div class="mt-8">
+            <svg class="animate-spin h-10 w-10 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <h2 class="text-3xl md:text-5xl font-bold text-pink-700 mb-8 text-center px-4">
+            ¡Haz clic en el corazón! (obligatorio)
+        </h2>
+        <div id="main-heart" class="heart-icon">❤️</div>
+    </div>
+
+    <!-- Main Menu Screen -->
+    <div id="main-menu" class="p-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-pink-800 mb-8 drop-shadow-md">
+            ¡Bienvenida, mi Alen!
+        </h1>
+        <div class="space-y-4">
+            <button id="read-letter-button" class="custom-button">
+                Leer mi Carta Especial por tu Día 
+            </button>
+            <button class="custom-button">
+                Galería de Fotos (Próximamente a futuro)
+            </button>
+            <button id="show-drawings-button" class="custom-button">
+                Dibujos/edits y videos que te hice
+            </button>
+        </div>
+    </div>
+
+    <!-- Letter Modal Overlay -->
+    <div id="letter-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button" id="close-letter-button">&times;</button>
+            <h3 class="text-2xl font-bold text-pink-700 mb-4">Mi Carta para ti, Alen</h3>
+            <div id="letter-content" class="text-gray-700 text-lg leading-relaxed text-left max-h-96 overflow-y-auto pr-2">
+                <!-- CONTENIDO DE LA CARTA: ¡Puedes editar este texto! -->
+              <p class="mb-4">
+    Mi querida Alen,
+</p>
+
+<p class="mb-4">
+    Hoy es un día muy especial porque celebramos tus 20 años, y me siento afortunado de poder compartir contigo este momento tan importante. No sabes cuánto me alegra ver cómo creces, cómo avanzas en tu vida y cómo cada día te conviertes en alguien aún más increíble de lo que ya eras. 
+</p>
+
+<p class="mb-4">
+    Llegar a los 20 no es solo cumplir años, es abrir un capítulo nuevo lleno de oportunidades, sueños y experiencias que estoy seguro vas a conquistar. Yo, desde mi lugar, me siento muy feliz de poder acompañarte, de verte sonreír, de escucharte hablar con esa pasión que te caracteriza, y de poder aprender tanto de ti.
+</p>
+
+<p class="mb-4">
+    Eres una persona maravillosa, con una luz inmensa que ilumina incluso los días más oscuros. Tu bondad, tu ternura, tu forma de ver la vida y tu capacidad para dar amor sin medida me inspiran todos los días. Amo tu forma de ser, cómo siempre encuentras la manera de hacerme reír, cómo me apoyas cuando más lo necesito y cómo simplemente tu presencia me da paz.
+</p>
+
+<p class="mb-4">
+    Tengo tantas anécdotas contigo guardadas en mi corazón, momentos pequeños y grandes que se han convertido en recuerdos inolvidables. Cada conversación, cada risa compartida, cada instante contigo construye la historia más linda que jamás imaginé vivir. Gracias por cada detalle, por cada palabra, por cada gesto que me demuestra lo mucho que significas para mí.
+</p>
+
+<p class="mb-4">
+    Mi deseo para vos en este cumpleaños es que seas feliz, que cumplas todas tus metas, que nunca dejes de soñar y que siempre recuerdes lo valiosa que eres. Sé que vas a llegar lejos, porque tenés un corazón gigante y una fuerza que te hace imparable. Yo siempre voy a estar aquí, apoyándote en cada paso, celebrando tus logros y sosteniéndote en los momentos difíciles.
+</p>
+
+<p class="mb-4">
+    Gracias, mi amor, por ser parte de mi vida, por regalarme tu tiempo, tu cariño y tu esencia. Gracias por enseñarme que el amor verdadero se siente en cada detalle y que no importa lo que pase, siempre vale la pena luchar por lo que uno ama. Eres lo mejor que me ha pasado, y no hay palabras suficientes para describir lo mucho que significas para mí.
+</p>
+
+<p class="mb-4">
+    Que este cumpleaños sea solo el comienzo de un año lleno de cosas hermosas, porque lo mereces todo y más. Yo me siento orgulloso de ti y feliz de poder decirte lo mucho que te amo.
+</p>
+
+<p class="mb-4">
+    Con todo mi amor, para siempre,
+</p>
+
+<p class="font-bold text-pink-600">
+    Jasvier
+</p>
+                <!-- FIN DEL CONTENIDO DE LA CARTA -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Drawings Modal Overlay -->
+    <div id="drawings-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button" id="close-drawings-button">&times;</button>
+            <h3 class="text-2xl font-bold text-pink-700 mb-4">Mis Dibujos para Ti</h3>
+            <div class="drawings-grid">
+                <!-- INICIO: Aquí puedes añadir tus dibujos e imágenes. Usa imágenes JPG/PNG, SVG o videos. -->
+                <div class="drawing-item" data-type="image" data-src="edit.jpeg">
+                    <img src="edit.jpeg" alt="Dibujo para Alen 1" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/000000?text=Error+Carga';" class="rounded-lg">
+                </div>
+                <div class="drawing-item" data-type="image" data-src="tulip.jpeg">
+                    <img src="tulip.jpeg" alt="Dibujo para Alen 2" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/000000?text=Error+Carga';" class="rounded-lg">
+                </div>
+                <div class="drawing-item" data-type="image" data-src="WhatsApp Image 2025-08-12 at 19.18.09.jpeg">
+                    <img src="WhatsApp Image 2025-08-12 at 19.18.09.jpeg" alt="Dibujo para Alen 3" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/000000?text=Error+Carga';" class="rounded-lg">
+                </div>
+                <!-- Ejemplo de cómo añadir un video con su portada (reemplaza 'imagen-de-portada.jpg' y 'video.mp4') -->
+                <div class="drawing-item video-container" data-type="video" data-src="video.mp4">
+                    <video class="rounded-lg" preload="metadata" poster="video.mp4">
+                        <source src="video.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                    <div class="play-button-overlay">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- FIN: Puedes añadir más elementos aquí siguiendo el mismo patrón -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Magnified View Modal -->
+    <div id="magnified-modal-overlay" class="modal-overlay">
+        <div class="modal-content !p-0 !bg-transparent !shadow-none">
+            <button class="close-button !text-white !text-4xl" id="close-magnified-button">&times;</button>
+            <div id="magnified-content" class="w-full h-full flex justify-center items-center p-4">
+                <img id="magnified-image" src="video.mp4" alt="Ampliado" class="max-w-full max-h-full object-contain rounded-lg hidden">
+                <video id="magnified-video" controls class="max-w-full max-h-full object-contain rounded-lg hidden">
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta el tag de video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
